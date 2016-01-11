@@ -1,3 +1,14 @@
+# Description
+#   A Hubot scripts that responds 'uranai'
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   tdlkun 運勢 -responds 今日の運勢
+# Author:
+#   siu
+
 module.exports = (robot) ->
   robot.hear /運勢|占い|うらない|おみくじ/i,(msg) ->
     greads = [
