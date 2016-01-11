@@ -5,10 +5,7 @@
 #   None
 #
 # Commands:
-#   tdlkun 運勢 -responds 今日の運勢
-#   tdlkun うらない -responds 今日の運勢
-#   tdlkun おみくじ -responds 今日の運勢
-#   tdlkun 占い -responds 今日の運勢
+#   tdlkun /運勢|占い|うらない|おみくじ/i -responds 今日の運勢
 # Author:
 #   siu
 
