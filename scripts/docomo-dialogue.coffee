@@ -37,7 +37,7 @@ module.exports = (robot) ->
       .post(JSON.stringify(status)) (err, res, body) ->
         if err? or res.statusCode isnt 200
           return msg.reply("#{ERR_MSG}\n```\n#{err}\n```")
-        msg.reply(JSON.parse(body).utt)
+        msg.send(JSON.parse(body).utt)
         status.time = now
         status.context = JSON.parse(body).context
         status.mode = JSON.parse(body).mode
