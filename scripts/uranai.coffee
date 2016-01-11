@@ -5,12 +5,12 @@
 #   None
 #
 # Commands:
-#   tdlkun /運勢|占い|うらない|おみくじ/i -responds 今日の運勢
+#   tdlkun 今日の運勢 -responds 今日の運勢
 # Author:
 #   siu
 
 module.exports = (robot) ->
-  robot.hear /運勢|占い|うらない|おみくじ/i,(msg) ->
+  robot.hear /占い|運勢|うらない|uranai|占|おみくじ/i,(msg) ->
     greads = [
       "大吉",
       "中吉",
@@ -20,6 +20,6 @@ module.exports = (robot) ->
       "大凶",
       "めうキチ"
     ]
-    color = "#{Math.floor(Math.random()*256).toString(16)}#{Math.floor(Math.random()*256).toString(16)}#{Math.floor(Math.random()*256).toString(16)}"
+    color = "#{("0"+Math.floor(Math.random()*256).toString(16)).slice(-2)}#{("0"+Math.floor(Math.random()*256).toString(16)).slice(-2)}#{("0"+Math.floor(Math.random()*256).toString(16)).slice(-2)}"
     gread = msg.random greads
     msg.send "今日の運勢は #{gread} です。ラッキーカラーは ##{color} です。"
